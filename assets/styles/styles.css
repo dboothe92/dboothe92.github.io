@@ -14,6 +14,11 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1.5vw;
+    background-image: url("../images/SLC.jpeg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    z-index: 99999;
 } 
 
 header nav ul {
@@ -31,6 +36,22 @@ header nav ul li a {
 header a {
     text-decoration: none;
 } 
+
+/*Hero*/
+.hero {
+    background-image: url("../images/SLC.jpeg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    height: 33vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hero img {
+    height:90%;
+}
 
 
 
