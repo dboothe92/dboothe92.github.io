@@ -10,7 +10,7 @@ body {
 
 /*Navigation*/
 header {
-    background: chartreuse;
+    background:#ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -64,7 +64,7 @@ header a {
 }
 
 .me img {
-    padding-bottom: 1.1vw;;
+    padding: 1.1vw 0;
 }
 
 /*Layout for main section*/
@@ -92,7 +92,11 @@ header a {
 }
 
 .projects h3 {
+    text-align: center;
+    font-style: italic;
     font-size: 1.75vw;
+    margin-left: 11vw;
+    
 }
 
 .projects h3:not(:first-child) {
@@ -103,3 +107,48 @@ header a {
    margin-top: .5vw;
 }
 
+/*Contact Me*/
+.contact {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.contact label {
+    font-weight: bold;
+    font-size: 1.6vw;
+}
+
+.contact input, textarea {
+    border-radius: .5vw;
+}
+
+.contact input:not(:nth-child(6)){
+    margin-bottom: 1.1vw;
+}
+
+.contact button {
+    width: 30%;
+    margin: 0 auto;
+    padding: 1vw;
+}
+
+
+/*Footer*/
+.footer {
+    padding: 1.5vw 4vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+    font-size: 2vw;
+    text-decoration: none;
+}
