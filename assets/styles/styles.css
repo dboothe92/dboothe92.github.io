@@ -10,7 +10,10 @@ body {
 
 /*Navigation*/
 header {
-    background:#ffffff;
+    background-image: url(../images/hero.svg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -31,7 +34,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    font-size: 1.7vw;
+    font-size: 2vw;
     padding: 1.7vw;
 }
 
@@ -39,14 +42,24 @@ header a {
     text-decoration: none;
 } 
 
+header nav ul li a:hover{
+    background: #b8dbef;
+    color: #000000;
+    border-radius: 1.1vw;
+}
+
 /*Hero*/
 .hero {
-    background-color: #ffffff;
+    background-image: url(../images/hero.svg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
     background-size: cover;
     background-position: 80%;
     background-attachment: fixed;
     height: 25vw;
     text-align: center;
+    padding-top: 1.5vw;
 }
 
 .me {
@@ -55,33 +68,36 @@ header a {
 }
 
 .me h1 {
+    padding-top: 1.1vw;
     font-size: 2.5vw;
 }
 
 .me p {
-    font-size: .9vw;
+    font-size: 1vw;
     font-style: italic;
 }
 
 .me img {
-    padding: 1.1vw 0;
+    box-shadow:0 1vw 5vw;
+    border-radius: 50%;
 }
 
 /*Layout for main section*/
 .main-layout {
     padding:  0 2.5vw 3.5vw 2.5vw;
     line-height: 1.5;
-    width: 80%;
     margin: 0 auto;
 }
 
 .main-layout h2 {
     font-size: 2.2vw;
-    padding-bottom: 1.2vw;
+    padding: 1.2vw 0 0 4vw;
+    border-bottom: .2vw solid #000000;
 }
 
-.main-layout p {
-    margin-left: 11vw;
+.main-layout p{
+    margin: 1.5vw auto 0 auto;
+    width: 80%;
 }
 
 /*projects Section*/
@@ -92,10 +108,9 @@ header a {
 }
 
 .projects h3 {
-    text-align: center;
     font-style: italic;
     font-size: 1.75vw;
-    margin-left: 11vw;
+    margin-top: 1.5vw;
     
 }
 
@@ -105,10 +120,6 @@ header a {
 
 .projects p {
    margin-top: .5vw;
-}
-
-.projects img {
-    width: 30%;
 }
 
 /*Contact Me*/
@@ -128,6 +139,20 @@ header a {
     border-radius: .33vw;
 }
 
+.contact input {
+    height: 2.5vw;
+}
+
+.contact input:focus, .contact textarea:focus {
+    background: #e2f2f9;
+    outline: none;
+}
+
+.contact textarea {
+    height: 10vw;
+}
+
+
 .contact input:not(:nth-child(6)){
     margin-bottom: 1.1vw;
 }
@@ -138,11 +163,16 @@ header a {
     padding: .75vw;
     font-weight: bold;
     font-size: 1vw;
+    border-radius: .5vw;
 }
 
 
 /*Footer*/
 .footer {
+    background-image: url(../images/hero.svg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
     padding: 1.5vw 4vw;
     display: flex;
     flex-wrap: wrap;
@@ -160,7 +190,74 @@ header a {
 }
 
 .footer a {
-
     font-size: 1.5vw;
     text-decoration: none;
+}
+
+/*Media Queries <768px*/
+@media screen and (max-width:768px){
+    header {
+        position: relative;
+    }
+
+    header nav ul li a{
+        font-size: 4vw;
+        margin-bottom: 0;
+    }
+    .me h1 {
+        font-size: 4vw;
+    }
+
+    .me p {
+        opacity: 0;
+    }
+
+    .main-layout {
+        text-align: center;
+    }
+
+    .main-layout h2 {
+        font-size: 4vw
+    }
+}
+
+/*Media Queries <575px*/
+@media screen and (max-width:575px){
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li a {
+        font-size: 7vw;
+    }
+
+    .hero {
+        height: 20vw;
+    }
+
+    .hero h1 {
+        font-size: 15vw;
+    }
+
+    .hero img {
+        display: none;
+    }
+
+    .main-layout {
+        width: 80%;
+    }
+
+    .main-layout h2 {
+        font-size: 9vw;
+    }
+
+    .main-layout p {
+        font-size: 3vw;
+    }
+
+    .projects h3 {
+        font-size: 4.5vw;
+        margin-top: 5vw;
+    }
 }
